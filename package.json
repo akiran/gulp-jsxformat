@@ -1,10 +1,9 @@
 {
   "name": "gulp-jsxformat",
   "version": "0.1.0",
-  "description": "\"gulp plugin for jsx formating\"",
+  "description": "gulp plugin for jsx formating",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -24,7 +23,8 @@
   "homepage": "https://github.com/akiran/gulp-jsxformat",
   "dependencies": {
     "gulp-util": "^3.0.4",
-    "jsxformat": "0.0.8"
+    "jsxformat": "0.0.8",
+    "through2": "^0.6.3"
   },
   "devDependencies": {
     "gulp": "^3.8.11"
