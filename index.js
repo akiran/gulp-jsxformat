@@ -3,7 +3,13 @@
 // var jsxformat = require('jsxformat');
 var gutil = require('gulp-util');
 var through = require('through2');
-var esformatter = require('esformatter');
+var proxyquire = require('proxyquire');
+var rocambole = proxyquire('rocambole', {
+  'esprima': require('esprima-fb')
+});
+var esformatter = proxyquire('esformatter', {
+  rocambole: rocambole
+});
 esformatter.register(require('esformatter-jsx'));
 
 module.exports = function (options) {
